@@ -1,0 +1,82 @@
+nav > ul > li > a{
+    text-decoration: none;
+}
+
+nav ul li ul li a {
+    text-decoration: none;
+
+}
+
+form{
+    margin: 7rem auto;
+    width: 35%;
+    max-width: 700rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+h2{
+    align-content: center;
+}
+
+button{
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    background-color: #F25C05;
+    color: white;
+    border: 1px solid #F25C05;
+}
+
+button:hover,
+button:active{
+    background-color: #f28c51;
+    border-color: #f28c51;
+}
+
+.form-control{
+    margin-bottom: 1rem;
+
+}
+
+.form-control input{
+    font: inherit;
+    padding: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: block;
+    width: 10rem;
+}
+
+.form-control input:focus{
+    border-color: #F25C05;
+    outline: none;
+    
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-right: 0.50rem;
+
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.errorlist{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+    color: red;
+}
+
+.error input{
+    border-color: red;
+}
+
+.chart{
+    width: 100%;
+    min-height: 400px;
+}

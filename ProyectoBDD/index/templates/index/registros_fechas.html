@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "index/index.css" %}">
+{% endblock  %}
+
+{% block content %}
+
+    <form action="{% url "mostrar-lista-fecha" %}" method="POST" novalidate>
+        {% csrf_token %}
+            <h2>REGISTRAR PISCINA</h2>
+        {% for field in form %}
+        
+            <div class="form-control {% if field.errors %} error {% endif %}" >
+                <label for="{{ field.id_for_label }}">{{ field.label}}</label>
+                {{ field }}
+                {{ field.errors }}
+            </div>
+        {% endfor %}
+
+            <button>Enviar</button>
+        
+    </form>
+
+{% endblock  %}

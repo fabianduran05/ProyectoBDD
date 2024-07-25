@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock  %}</title>
+    <link rel="stylesheet" href="{% static "styles.css" %}">
+    
+    {% block css_files %}
+
+    {% endblock %}
+</head>
+
+<header>
+    <div class="header__superior">
+        
+    </div>
+    
+    <div class="container__menu">
+        <div class="logo">
+            <img src="{% static "img/logo_camaron.png" %}" alt="">
+        </div> 
+
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#">Registrar</a>
+                        <ul>
+                            <li><a href="{% url "registrar-piscina" %}">Nueva Piscina</a></li>
+                            <li><a href="{% url "registrar-parametros" %}">Medición de parámetros</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Reportes</a>
+                        <ul>
+                            <li><a href="{% url "registros-recientes" %}">Registros Recientes</a></li>
+                            <li><a href="{% url "registros-fuera-control" %}">Resgistros fuera de control</a></li>
+                            <li><a href="{% url "registros-fechas" %}">Registros por fecha</a></li>
+                            <li><a href="{% url "elegir-piscina" %}">Buscar Piscina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url "graficos" %}">Gráficos</a></li>
+                    <li><a href="{% url "piscinas-datatable" %}">Piscinas</a></li>
+                </ul>            
+            </nav>
+        </div>
+        
+    </div>
+</header>
+<body>
+    {% block content %}{% endblock  %}
+</body>
+</html>

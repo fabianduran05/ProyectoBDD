@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 80%;
+    margin: 7rem 0;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+}
+
+nav ul li ul li a {
+    text-decoration: none;
+
+}
+
+.opciones{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    
+}
+
+.opciones a{
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 8px;
+    border-radius: 5px;
+    color: white;
+}
+
+.opciones a.actualizar{
+    background-color: #4CAF50;
+}
+
+.opciones a.eliminar{
+    background-color: #f44336;
+}
+
+.opciones a:hover{
+    opacity: 0.8;
+}

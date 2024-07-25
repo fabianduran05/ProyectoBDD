@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "index/eliminar-registro.css" %}">
+{% endblock  %}
+
+{% block content %}
+<div id="overlay" class="overlay">
+    <div class="modal">
+        <h2>Advertencia</h2>
+        <p>¿Está seguro que desea eliminar la piscina {{ nombre }}?</p>
+        <div class="buttons">
+
+            <form method="POST" action="{% url 'eliminar-piscina' pk %}">
+                {% csrf_token %}
+                <input type="hidden" name="decision" id="decision" value="">
+                <button type="submit" class="confirm" onclick="document.getElementById('decision').value='yes'">Sí</button>
+                <button id="cancelButton" class="cancel" onclick="document.getElementById('decision').value='no'">No</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+{% endblock  %}
